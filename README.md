@@ -1,12 +1,12 @@
 # Team Name: Lab 2 Website
 
-**Live site:** https://mungau31.github.io/team-website/
+**Live site:** https://deno-karis.github.io/team-website/
 
 ## Team
 | Name              | Registration no. | GitHub username |
 |-------------------|------------------|-----------------|
-| Abel mungau      | COM/3482/26      | mungau31     |
-|                   |                  |                 |
+|Kariuki Joel       | COM/3471/26      | deno-karis      |
+|Abel mungau        | com/3482/26      | abelmungau31    |
 
 ## Who drove each part
 - Part 0, 2, 4: Kariuki Joel
