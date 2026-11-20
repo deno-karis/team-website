@@ -1,5 +1,5 @@
  /* =====================================================
-   Team website script (CSC 216, Lab 2)
+   Team novateq script (CSC 216, Lab 2)
    Loaded on every page with `defer`, so the HTML is
    fully parsed before any of this code runs.
    ===================================================== */
@@ -47,12 +47,19 @@ if (themeToggle) {
 /* ---------- 2. Projects page ---------- */
 
 const projects = [
-  { title: 'Personal landing page', category: 'html', description: 'A single semantic HTML page with headings, lists and links.' },
-  { title: 'Responsive card grid', category: 'css', description: 'A layout that goes from one column on phones to three on laptops.' },
-  { title: 'Tip calculator', category: 'js', description: 'Reads two inputs and updates the total as you type.' },
-  { title: 'Accessible contact form', category: 'html', description: 'Labelled fields, helpful errors and keyboard-friendly controls.' },
-  { title: 'Dark mode toggle', category: 'js', description: 'Switches the colour theme and remembers the choice.' },
-  { title: 'Flexbox navigation bar', category: 'css', description: 'A header that collapses into a menu button on small screens.' }
+  
+{
+  title: "Student Registration System",
+  description: "A student registration website where students can enter their names, email addresses, select courses and submit their registration details.",
+  technologies: ["HTML", "CSS", "JavaScript"],
+  category: "js"
+},
+{
+  title: "To-Do List Application",
+  description: "A task management website that allows users to add daily tasks, mark tasks as completed and delete tasks when they are finished.",
+  technologies: ["HTML", "CSS", "JavaScript"],
+  category: "js"
+}
 ];
 
 const categoryNames = { html: 'HTML', css: 'CSS', js: 'JavaScript' };
@@ -82,8 +89,13 @@ function renderProjects(filter) {
     const text = document.createElement('p');
     text.textContent = project.description;
 
-    card.append(tag, heading, text);
-    projectList.append(card);
+    const link = document.createElement('a');
+link.href = project.link;
+link.textContent = 'View Project';
+link.className = 'project-link';
+
+card.append(tag, heading, text, link);
+projectList.append(card);
   });
 
   projectCount.textContent = `Showing ${visible.length} of ${projects.length} projects`;
@@ -166,4 +178,95 @@ if (form) {
     form.reset();
     charCount.textContent = '0';
   });
+}
+
+/* ---------- 4. Student Registration System ---------- */
+
+const registrationForm = document.querySelector('#registration-form');
+
+if (registrationForm) {
+  registrationForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const name = document.querySelector('#student-name').value.trim();
+    const email = document.querySelector('#student-email').value.trim();
+    const course = document.querySelector('#student-course').value;
+
+    const message = document.querySelector('#registration-message');
+
+    message.textContent =
+      `Congratulations, ${name}! You have successfully registered for ${course}.`;
+
+    registrationForm.reset();
+  });
+}
+
+/* ---------- 5. To-Do List Application ---------- */
+
+const todoForm = document.querySelector('#todo-form');
+const todoInput = document.querySelector('#todo-input');
+const todoList = document.querySelector('#todo-list');
+
+if (todoForm && todoInput && todoList) {
+
+  // Load saved tasks.
+  let tasks = JSON.parse(localStorage.getItem('team-tasks') || '[]');
+
+  function displayTasks() {
+    todoList.replaceChildren();
+
+    tasks.forEach((task, index) => {
+      const li = document.createElement('li');
+
+      const span = document.createElement('span');
+      span.textContent = task.text;
+
+      if (task.completed) {
+        span.style.textDecoration = 'line-through';
+      }
+
+      const completeBtn = document.createElement('button');
+      completeBtn.textContent = task.completed ? 'Undo' : 'Complete';
+
+      completeBtn.addEventListener('click', () => {
+        tasks[index].completed = !tasks[index].completed;
+        saveTasks();
+      });
+
+      const deleteBtn = document.createElement('button');
+      deleteBtn.textContent = 'Delete';
+
+      deleteBtn.addEventListener('click', () => {
+        tasks.splice(index, 1);
+        saveTasks();
+      });
+
+      li.append(span, completeBtn, deleteBtn);
+      todoList.append(li);
+    });
+  }
+
+  function saveTasks() {
+    localStorage.setItem('team-tasks', JSON.stringify(tasks));
+    displayTasks();
+  }
+
+  todoForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const taskText = todoInput.value.trim();
+
+    if (taskText === '') return;
+
+    tasks.push({
+      text: taskText,
+      completed: false
+    });
+
+    saveTasks();
+    todoForm.reset();
+    todoInput.focus();
+  });
+
+  displayTasks();
 }
