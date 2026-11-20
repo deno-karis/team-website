@@ -1,12 +1,23 @@
+<<<<<<< HEAD
 ## Team Name: Lab 2 Website
 
 **Live site:** https://abelmungau31.github.io/team-website/
+=======
+# Team Name: Lab 2 Website
+
+**Live site:** https://deno-karis.github.io/team-website/
+>>>>>>> c20d4a8b6044e67795899f3c306db105d1f45569
 
 ## Team
 | Name              | Registration no. | GitHub username |
 |-------------------|------------------|-----------------|
+<<<<<<< HEAD
 | Kariuki Joel      | COM/3471/26      | deno-karis      |
 | Abel mungau       | Com/3482/26      | abelmungau31    |
+=======
+|Kariuki Joel       | COM/3471/26      | deno-karis      |
+|Abel mungau        | com/3482/26      | abelmungau31    |
+>>>>>>> c20d4a8b6044e67795899f3c306db105d1f45569
 
 ## Who drove each part
 - Part 0, 2, 4: Kariuki Joel
@@ -14,7 +25,11 @@
 
 ## Personalisation
 - Our colors: Blue, white and Black
+<<<<<<< HEAD
 - Projects we added: Tip calculator, student Management system
+=======
+- Project we added: Tip calculator, student Management system
+>>>>>>> c20d4a8b6044e67795899f3c306db105d1f45569
 - Extension challenge(s) completed: Flexbox navigation bar, Responsive card grid
 
 ## Reflection
@@ -23,6 +38,7 @@
 3.How we overcome the challenge: We practiced to code the git code until we understood it
 4.collaboration: we collaborated with partner through out the entire project
 5.what to improve on our website: add more interractivity.
+<<<<<<< HEAD
 6.skills gained: we gained much skill in web developement. team-website
 
 1.	The menu toggle is a <button>, not a clickable <div>. Name two things you would lose with a <div>, and who would be affected.
@@ -52,3 +68,6 @@
 
 
 
+=======
+6.skills gained: we gained much skill in web developement.
+>>>>>>> c20d4a8b6044e67795899f3c306db105d1f45569
