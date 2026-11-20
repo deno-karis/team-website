@@ -1,7 +1,7 @@
 <<<<<<< HEAD
 ## Team Name: Lab 2 Website
 
-**Live site:** https://abelmungau31.github.io/team-website/
+**Live site:** https://deno-karis.github.io/team-website/
 =======
 # Team Name: Lab 2 Website
 
@@ -11,10 +11,6 @@
 ## Team
 | Name              | Registration no. | GitHub username |
 |-------------------|------------------|-----------------|
-<<<<<<< HEAD
-| Kariuki Joel      | COM/3471/26      | deno-karis      |
-| Abel mungau       | Com/3482/26      | abelmungau31    |
-=======
 |Kariuki Joel       | COM/3471/26      | deno-karis      |
 |Abel mungau        | com/3482/26      | abelmungau31    |
 >>>>>>> c20d4a8b6044e67795899f3c306db105d1f45569
