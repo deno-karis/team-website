@@ -14,7 +14,7 @@
 
 ## Personalisation
 - Our colors: Blue, white and Black
-- Projects we added: Tip calculator, student Management system
+- Project we added: Tip calculator, student Management system
 - Extension challenge(s) completed: Flexbox navigation bar, Responsive card grid
 
 ## Reflection
